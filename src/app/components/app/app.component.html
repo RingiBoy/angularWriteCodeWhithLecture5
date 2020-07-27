@@ -1,0 +1,38 @@
+<!--<form #myForm="ngForm">-->
+<!--<input type="text" [(ngModel)]="auth.login" #loginNamee="ngModel" required name="loginname" >-->
+<!--<input type="password" [(ngModel)]="auth.password" #passwordNamee ="ngModel" name="passwordname">-->
+<!--&lt;!&ndash;&ndash;&gt;-->
+<!--  <button (click)="doLogin(myForm)" [disabled]="!myForm.valid">Login</button>-->
+<!--&lt;!&ndash;  \\???&ndash;&gt;-->
+<!--</form>-->
+
+  <!--<button (click)="doLogin(loginNamee, passwordNamee)" *ngIf="loginNamee.valid">Login</button>-->
+<!--<button (click)="doLogin(loginNamee, passwordNamee)" *ngIf="auth.login.valid">Login</button> ????-->
+
+<form #Form="ngForm" (ngSubmit)="findSmth()">
+  <select name="type" [(ngModel)]="type">
+    <option [value]="'posts'">show all posts</option>
+    <option [value]="'users'" name="userX">show all users</option>
+    <option [value]="'comments'">show all comments</option>
+
+  </select>
+  <button>submit</button>
+</form>
+
+
+<form #Form2="ngForm" (ngSubmit)="idSmth()">
+  <select name="idForm" [(ngModel)]="idTs">
+    <option [value]="1">id 1</option>
+    <option [value]="2">id 2</option>
+    <option [value]="3">id 3</option>
+    <option [value]="4">id 4</option>
+    <option [value]="5">id 5</option>
+    <option [value]="6">id 6</option>
+    <option [value]="7">id 7</option>
+    <option [value]="8">id 8</option>
+    <option [value]="9">id 9</option>
+    <option [value]="10">id 10</option>
+
+  </select>
+  <button>find</button>
+</form>
