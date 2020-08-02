@@ -23,16 +23,15 @@
 <form #Form2="ngForm" (ngSubmit)="idSmth()">
   <label>
     <select name="idForm" [(ngModel)]="idTs">
-      <option [value]="1">id 1</option>
-      <option [value]="2">id 2</option>
-      <option [value]="3">id 3</option>
-      <option [value]="4">id 4</option>
-      <option [value]="5">id 5</option>
-      <option [value]="6">id 6</option>
-      <option [value]="7">id 7</option>
-      <option [value]="8">id 8</option>
-      <option [value]="9">id 9</option>
-      <option [value]="10">id 10</option>
+
+<!--      <ul> -->
+<!--        <li *ngFor=" let i = index">-->
+<!--          {{ i + 1 }} -->
+<!--        </li>-->
+<!--      </ul>-->
+
+      <option *ngFor=" let cointID of idCounts" [value]="cointID.id">id {{cointID.id}}</option>
+
 
     </select>
   </label>

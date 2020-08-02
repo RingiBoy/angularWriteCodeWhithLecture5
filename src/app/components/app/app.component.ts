@@ -16,7 +16,7 @@ export class AppComponent {
 
   type: string;
   idTs: number;
-  typeUser: User;
+  idCounts: any[];
 
   constructor(private serviceFind: FindSmthService, private servicePost: FindAllPostsOfUserService, private servComments: FindAllCommentsOfPostService) {
   }
@@ -26,7 +26,10 @@ export class AppComponent {
     console.log('this.type');
     console.log(this.type);
 
-    this.serviceFind.FindAllAny(this.type).subscribe(value => console.log(value));
+    this.serviceFind.FindAllAny(this.type).subscribe(value => {
+      console.log(value);
+      this.idCounts = value;
+    });
   }
 
 
